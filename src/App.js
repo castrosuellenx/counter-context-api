@@ -1,12 +1,21 @@
 import React from 'react';
 
+import CountProvider from './context/Counter';
+
 import Counter from './components/Counter';
+import Mirror from './components/Mirror';
 
 function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <CountProvider>
+      <div>
+        <Counter />
+
+        <hr />
+
+        <Mirror />
+      </div>
+    </CountProvider>
   );
 }
 

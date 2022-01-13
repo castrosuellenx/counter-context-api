@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
+
+import {useCount} from '../../context/Counter';
 
 export default function Counter() {
-  const [count, setCount] = useState(0);
+  const {count, setCount} = useCount();
 
   return (
     <div>
